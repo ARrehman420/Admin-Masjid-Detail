@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Admin-MasjidDetail</string>
+    <string name="_30_nannouncments">30 \nAnnouncments</string>
+    <string name="_50_nsubscribers">50 \nsubscribers</string>
+    <string name="admin_masjid_detail">Admin - Masjid Detail</string>
+    <string name="jamia_masjid_abu_bakkar_siddique_raziallah_tala_anhu">Jamia masjid Abu bakkar Siddique raziallah tala anhu</string>
+    <string name="jamaat">Jamaat</string>
+    <string name="lahore_pakistan_punjab">Lahore,Pakistan,punjab</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="_07_22_pm">07:22 PM</string>
+    <string name="edit">Edit</string>
+    <string name="duhr">Duhr</string>
+    <string name="_12_38_pm">12:38 PM</string>
+    <string name="string">Edit</string>
+    <string name="asr">Asr</string>
+    <string name="_05_19_pm">05:19 PM</string>
+    <string name="ed">Edit</string>
+    <string name="fajr">Fajr</string>
+    <string name="_04_28_am">04:28 AM</string>
+    <string name="edit2">Edit</string>
+    <string name="isha">Isha</string>
+    <string name="_08_49_pm">08:49 PM</string>
+    <string name="edit3">Edit</string>
+    <string name="announcment">Announcment</string>
+    <string name="profile">Profile</string>
+    <string name="jummah">Jummah</string>
+    <string name="_12_38_pm_2">12:38 PM</string>
+    <string name="edit4">Edit</string>
+    <string name="save">Save</string>
+    <string name="_30_announcements" />
+    <string name="_50_subscribers" />
+    <string name="jamaat_time">Jamaat Time</string>
+</resources>
