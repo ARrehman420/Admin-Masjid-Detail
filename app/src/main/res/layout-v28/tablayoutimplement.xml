@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--Tool bar (including back button and text view "Admin-Masjid Detail")-->
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Color1st"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Profile -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="23.74dp"
+            android:layout_marginBottom="23.23dp"
+            android:fontFamily="@font/helvetica_neue_lt_com_65_medium"
+            android:text="@string/admin_masjid_detail"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableStart="@drawable/vector_8" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Profile Picture CardView    -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30.72dp"
+                android:outlineSpotShadowColor="@color/white"
+                app:cardBackgroundColor="@color/Color2nd"
+                app:cardCornerRadius="160dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
+
+            <!--Announcment TextView   -->
+            <TextView
+                android:id="@+id/textViewAnnouncments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="54.72dp"
+                android:fontFamily="@font/helvetica_neue_lt_com_65_medium"
+                android:gravity="center"
+                android:text="@string/_30_nannouncments"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImage"
+                app:layout_constraintTop_toTopOf="@id/constraintparent" />
+
+            <!--Subscription TextView-->
+
+
+            <!--    Masjid name TextView -->
+
+            <TextView
+                android:id="@+id/textViewSubscribers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54.72dp"
+                android:layout_marginEnd="74dp"
+                android:layout_marginBottom="48dp"
+                android:fontFamily="@font/helvetica_neue_lt_com_65_medium"
+                android:gravity="center"
+                android:text="@string/_50_nsubscribers"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/constraintparent"
+                app:layout_constraintTop_toTopOf="@id/constraintparent" />
+
+            <TextView
+                android:id="@+id/textViewMasjidName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="17dp"
+                android:fontFamily="@font/helvetica_neue_lt_com_65_medium"
+                android:text="@string/jamia_masjid_abu_bakkar_siddique_raziallah_tala_anhu"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardViewImage" />
+
+
+            <!--Masjid Location Text view    -->
+            <TextView
+                android:id="@+id/TextViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/helvetica_neue_lt_com_65_medium"
+                android:gravity="center"
+                android:text="@string/lahore_pakistan_punjab"
+                app:drawableStartCompat="@drawable/location_icon_uia"
+                app:layout_constraintStart_toStartOf="@id/constraintparent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMasjidName" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ToolbarLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/constraintparent"
+                app:layout_constraintTop_toBottomOf="@id/TextViewLocation">
+
+
+                <!--<TableLayout-->
+                <!--    android:layout_width="match_parent"-->
+                <!--    android:layout_height="wrap_content"-->
+                <!--    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--    app:layout_constraintStart_toStartOf="parent"-->
+                <!--    app:layout_constraintTop_toTopOf="@id/ToolbarLayout">-->
+
+                <!--&lt;!&ndash;    <androidx.viewpager2.widget.ViewPager2&ndash;&gt;-->
+                <!--&lt;!&ndash;        android:layout_width="0dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;        android:layout_height="0dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;        >&ndash;&gt;-->
+
+
+                <!--    &lt;!&ndash;Jamaat Tab&ndash;&gt;-->
+                <!--            <Button-->
+                <!--                android:id="@+id/buttonJamaat"-->
+                <!--                android:layout_width="106dp"-->
+                <!--                android:layout_height="40dp"-->
+                <!--                android:layout_marginStart="24dp"-->
+                <!--                android:layout_marginTop="29dp"-->
+                <!--                android:background="@drawable/radius"-->
+                <!--                android:fontFamily="@font/helvetica_regular"-->
+                <!--                android:text="@string/jamaat"-->
+                <!--                android:textAllCaps="false"-->
+                <!--                android:textColor="@color/white"-->
+                <!--                android:textSize="14sp"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/TextViewLocation" />-->
+
+
+                <!--            &lt;!&ndash;Announcmenet Tab&ndash;&gt;-->
+                <!--            <Button-->
+                <!--                android:id="@+id/buttonAnnouncment"-->
+                <!--                android:layout_width="106dp"-->
+                <!--                android:layout_height="40dp"-->
+                <!--                android:layout_marginStart="3dp"-->
+                <!--                android:layout_marginTop="29dp"-->
+                <!--                android:background="@drawable/radius_2"-->
+                <!--                android:fontFamily="@font/helvetica_regular"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                android:text="@string/announcment"-->
+                <!--                android:textAllCaps="false"-->
+                <!--                android:textSize="14sp"-->
+                <!--                app:layout_constraintStart_toEndOf="@+id/buttonJamaat"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/TextViewLocation" />-->
+
+                <!--            &lt;!&ndash;profile Tab&ndash;&gt;-->
+                <!--            <Button-->
+                <!--                android:id="@+id/buttonProfile"-->
+                <!--                android:layout_width="106dp"-->
+                <!--                android:layout_height="40dp"-->
+                <!--                android:layout_marginStart="4dp"-->
+                <!--                android:layout_marginTop="29dp"-->
+                <!--                android:background="@drawable/radius_2"-->
+                <!--                android:fontFamily="@font/helvetica_regular"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                android:text="@string/profile"-->
+                <!--                android:textAllCaps="false"-->
+                <!--                android:textSize="14sp"-->
+                <!--                app:layout_constraintStart_toEndOf="@id/buttonAnnouncment"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/TextViewLocation" />-->
+
+                <!--            &lt;!&ndash;            Txtt VIew Jamaat Time &ndash;&gt;-->
+                <!--            <TextView-->
+                <!--                android:id="@+id/TextViewJamaatTime"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="24dp"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:fontFamily="@font/helvetica_medium"-->
+                <!--                android:text="@string/jamaat_time"-->
+                <!--                android:textColor="@color/black"-->
+                <!--                android:textSize="18sp"-->
+                <!--                app:layout_constraintStart_toStartOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/buttonAnnouncment"-->
+                <!--                />-->
+
+                <!--            &lt;!&ndash;    Fajr prayer Cardview&ndash;&gt;-->
+
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/cardViewFajr"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="match_parent"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                android:weightSum="3"-->
+                <!--                app:layout_constraintStart_toStartOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/TextViewJamaatTime">-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/fajr"-->
+                <!--                    android:textAlignment="gravity"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/_04_28_am"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/TextviewButtonFajr"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:layout_marginEnd="24dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/edit2"-->
+                <!--                    android:textAlignment="textEnd"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/Color1st" />-->
+                <!--            </LinearLayout>-->
+
+
+                <!--            &lt;!&ndash;     Duhr Prayer CardView&ndash;&gt;-->
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/cardViewDuhr"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                android:weightSum="3"-->
+                <!--                app:layout_constraintStart_toStartOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/cardViewFajr">-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/duhr"-->
+                <!--                    android:textAlignment="gravity"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/_12_38_pm"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/TextviewButtonDuhr"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:layout_marginEnd="24dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/edit"-->
+                <!--                    android:textAlignment="textEnd"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/Color1st" />-->
+                <!--            </LinearLayout>-->
+
+                <!--            &lt;!&ndash;     Asr Prayer CardView&ndash;&gt;-->
+
+
+                <!--            &lt;!&ndash;     Maghrib Prayer CardView&ndash;&gt;-->
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/cardViewAsr"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:weightSum="3"-->
+                <!--                app:layout_constraintStart_toStartOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/cardViewDuhr">-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/asr"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/_05_19_pm"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/EditButtonAsr"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:layout_marginEnd="24dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/ed"-->
+                <!--                    android:textAlignment="textEnd"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/Color1st" />-->
+
+                <!--            </LinearLayout>-->
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/cardViewMaghrib"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                app:layout_constraintEnd_toEndOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/cardViewAsr">-->
+
+                <!--                <TextView-->
+
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/maghrib"-->
+                <!--                    android:textAlignment="textStart"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/_07_22_pm"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/EditButtonMaghrib"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:layout_marginEnd="24dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/edit"-->
+                <!--                    android:textAlignment="textEnd"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/Color1st" />-->
+                <!--            </LinearLayout>-->
+
+                <!--            &lt;!&ndash;    Announcmet Tabvew Button&ndash;&gt;-->
+
+                <!--            &lt;!&ndash;Profile Tabview Button   &ndash;&gt;-->
+
+
+                <!--            &lt;!&ndash;     Isha Prayer CardView&ndash;&gt;-->
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/cardViewIsha"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                app:layout_constraintStart_toStartOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/cardViewMaghrib">-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/isha"-->
+                <!--                    android:textAlignment="textStart"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/_08_49_pm"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/EditButtonIsha"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:layout_marginEnd="24dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/edit3"-->
+                <!--                    android:textAlignment="textEnd"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/Color1st" />-->
+
+                <!--            </LinearLayout>-->
+
+
+                <!--            &lt;!&ndash;     Jummah Prayer CardView&ndash;&gt;-->
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/CardViewJummah"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="30dp"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:outlineSpotShadowColor="@color/white"-->
+                <!--                app:layout_constraintStart_toStartOf="@id/constraintparent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/cardViewIsha"-->
+
+                <!--                >-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/jummah"-->
+                <!--                    android:textAlignment="textStart"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/_12_38_pm_2"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <!--                <TextView-->
+
+                <!--                    android:id="@+id/EditButtonJummah"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:layout_marginEnd="24dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:fontFamily="@font/helvetica_regular"-->
+                <!--                    android:text="@string/edit4"-->
+                <!--                    android:textAlignment="textEnd"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/Color1st" />-->
+
+
+                <!--            </LinearLayout>-->
+
+                <!--    </androidx.viewpager2.widget.ViewPager2>-->
+
+                <!--</TableLayout>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+
+

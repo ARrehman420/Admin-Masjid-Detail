@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/EmailTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/emailtv"
+        android:textSize="12sp"
+        android:textColor="@color/Color5th"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/helvetica_light"/>
+
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/emailet"
+        android:background="@color/white"
+        android:paddingHorizontal="11dp"
+        android:paddingVertical="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/Color5th"
+        android:fontFamily="@font/helvetica_light"
+        android:textColorHint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EmailTextView"
+         />
+
+
+    <TextView
+        android:id="@+id/phoneNumberTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/phone_number"
+        android:fontFamily="@font/helvetica_light"
+        android:textColor="@color/Color5th"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+
+    <LinearLayout
+        android:id="@+id/phoneNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberTextView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/phonenumberradius"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/helvetica_light"
+            android:paddingStart="52dp"
+            android:paddingEnd="21dp"
+            android:text="@string/countrycode"
+            android:textColor="@color/Color5th"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            app:drawableEnd="@drawable/vector"
+            app:drawableStartCompat="@drawable/isolation_mode" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/Color5th"
+            android:text="@string/phonenum"
+            android:fontFamily="@font/helvetica_light"
+            android:background="#00FFFFFF"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:layout_marginEnd="55dp"
+
+            android:importantForAutofill="no" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButoonProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/profilesavebutton"
+        android:fontFamily="@font/helvetica_regular"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="#ACACAC"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberLayout"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
